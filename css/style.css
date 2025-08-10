@@ -7,7 +7,7 @@
 
 body {
   background-color: #f6f6f7;
-  max-width: 1200px;
+  max-width: 80vw;
   margin: auto;
 }
 
@@ -51,9 +51,10 @@ button {
 }
 
 #products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
+  gap: 20px;
 }
 
 .product-item {
@@ -83,4 +84,33 @@ button {
   color: #fff;
   padding: 5px 10px;
   border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 80vw;
+  }
+  header {
+    text-align: center;
+  }
+  input {
+    width: 250px;
+  }
+  #search {
+    text-align: center;
+  }
+  #search div {
+    text-align: center;
+  }
+  .filter {
+    margin: 10px 30px;
+  }
+  #search-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #search-price input {
+    margin: 40px 0 10px;
+  }
 }
